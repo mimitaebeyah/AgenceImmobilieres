@@ -9,6 +9,7 @@ django-crispy-forms==1.14.0
 django-extensions==3.1.5
 django-filter==21.1
 django-heroku==0.3.1
+django-on-heroku==1.1.2
 filelock==3.4.0
 gunicorn==20.1.0
 numpy==1.22.1
@@ -16,6 +17,7 @@ Pillow==9.0.0
 pipenv==2021.11.23
 platformdirs==2.4.0
 psycopg2==2.9.3
+psycopg2-binary==2.9.3
 pycifstar==0.2.8
 pydotplus==2.0.2
 pyparsing==3.0.7
