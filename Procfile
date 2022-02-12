@@ -1,1 +1,1 @@
-web: gunicorn AGIM.wsgi --log-file -
+web: gunicorn AGIM.wsgi 
