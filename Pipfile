@@ -8,6 +8,7 @@ django = "*"
 django-filter = "*"
 django-heroku = "*"
 django-crispy-forms = "*"
+pillow = "*"
 
 [dev-packages]
 

@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+from PIL import Image
 from pathlib import Path
 import django_heroku
 import dj_database_url
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'app',
     'crispy_forms',
     'django_filters',
+    'PIL',
 ]
 
 MIDDLEWARE = [
