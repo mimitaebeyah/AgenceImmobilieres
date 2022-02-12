@@ -1,0 +1,101 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+<div class="jumbotron text-center">
+
+    <h1>About Us</h1>
+
+    <p>Gestion D'une agnce immobiliere.</p>
+
+</div>
+
+<h2 class="w3-center">Our Services</h2>
+
+<div class="row w3-about-container">
+
+    <div class="col-md-6 col-sm-12">
+
+        <img src="{% static 'app/images/34.JPG'%}" style="width: 100%;height: 100%;">
+
+    </div>
+
+    <div class="col-md-6 col-sm-12 about-text-container">
+
+        <p>Nous Somme la pour vous conseiller dans le choix de votre maison , selon vos besois est capasite ,nous avons les outiles néssaires pour vous trouver un endroit parfait ...</p>
+
+    </div>
+
+</div>
+
+<div class="row w3-about-container">
+
+    <div class="col-md-6 col-sm-12 about-text-container">
+
+        <p> grace a notre site internet et son outil de recherche, vous pourez facilement trouver l'endroit dont vous .</p>
+
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+
+        <img src="{% static 'app/images/33.JPG'%}" style="width: 100%;height: 100%;">
+
+    </div>
+
+</div>
+<style>
+
+    .w3-about-container {
+
+        margin-top:1%; 
+
+        margin-left: 5%; 
+
+        margin-right: 5%; 
+
+        margin-bottom: 1%;
+
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+
+        .w3-about-container {
+
+            margin: 0!important;
+
+            padding: 0!important;
+
+        }
+
+    }
+
+
+
+    .about-text-container {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        font-family: sans-serif;
+
+        font-size: 160%;
+
+    }
+
+
+
+    .row {
+
+        margin-top: 3em!important;
+
+        margin-bottom: 3em!important;
+
+    }
+
+</style>
+{% endblock main-content %}

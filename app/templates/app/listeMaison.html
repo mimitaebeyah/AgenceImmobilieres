@@ -1,0 +1,55 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-7">
+        <h5>liste des maison</h5>
+        <form method="get">
+                <!-- <select name ="commune">
+                    {% for c in commune %}
+                    <option value="">  </option>
+                    {% endfor %}
+                </select> -->
+
+            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Rechercher
+              </button>
+                {{myFilter.form}}
+        </form>
+        
+          <!-- {{myFilter.form}} -->
+
+        <hr>
+        <div class= "card card-body">
+            <a class="btn btn-primary btn-sm btn-block" href="{% url 'ajouter_maison' %}">Créer une maison</a>
+            <table class="table table-sm">
+                <tr>
+
+                    <th>ID</th>
+                    <th>Prix</th>
+                    <th>Prix_reduit</th>
+                    <th>commune</th>
+                    <th>quartier</th>
+                    <th>Etat</th>
+                    <th>Dtails</th>
+
+                </tr>
+                {% for i in maison %}
+
+                <th>{{i.id}}</th>            
+                <th>{{i.Prix}}</th>
+                <th>{{i.Prix_reduit}}</th>
+                <th>{{i.commune}}</th>
+                <th>{{i.quartier}}</th>
+                <th>{{i.Etat}}</th>
+                <th><a class="btn btn-sm btn-info" href="{% url 'maison-detail' i.id %}">Details</th>
+                </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
