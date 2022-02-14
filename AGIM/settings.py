@@ -10,13 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pickle import TRUE
-#from PIL import Image
+from PIL import Image
 from pathlib import Path
 import django_heroku
 import dj_database_url
 import os
-from PIL import ImageTk, Image
-
  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
