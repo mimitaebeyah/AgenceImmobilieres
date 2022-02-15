@@ -66,7 +66,7 @@ class EnregistrementClientView(View):
         if form.is_valid():
             messages.success(request, 'congratilations!! Registered Successfully')
             form.save()
-        return render(request, 'app/inscription.html', {'form':form})   
+        return render(request, 'app/inscription.html', {'form':form}) 
 
 
 def checkout(request):
@@ -110,7 +110,7 @@ def Ajoutermaison(request):
             Etat = request.POST.get('Etat')
             maison = Maison.objects.create(title=title, Prix=Prix, Prix_reduit=Prix_reduit, description=description,quartier=quartier, commune=commune, image_maison=image_maison,Etat=Etat)
             form.save()
-            return redirect('ajouter_client')
+            return redirect('ajouter_maison')
     context={'form':form}
     return render(request, 'app/ajouter_maison.html', context)
 
@@ -131,6 +131,7 @@ def Liste_maisons(request):
     maison = Maison.objects.all()
     myFilter=Maisonfilter(request.GET, queryset=maison)
     maison = myFilter.qs
+
     context={'maison':maison, 'myFilter':myFilter}
     return render(request, 'app/listeMaison.html', context)
 

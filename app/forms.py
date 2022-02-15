@@ -38,8 +38,13 @@ class MypasswordChangeForm(PasswordChangeForm):
 
 class Isertmaison(forms.ModelForm):
     class Meta:
-        model=Maison
+        model = Maison
         fields=['title', 'Prix', 'Prix_reduit', 'description', 'quartier', 'commune', 'image_maison', 'Etat']
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.add_input(Submit('submit', 'Save person'))    
          
 
 

@@ -14,6 +14,7 @@ from PIL import Image
 from pathlib import Path
 import django_heroku
 import dj_database_url
+import logging
 import os
  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -84,16 +85,23 @@ WSGI_APPLICATION = 'AGIM.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        
-    }
-}
-# DATABASES = {
-#     'default':dj_database_url.config()
-# }
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.postgresql',
+  #      'NAME': 'mimi_db',
+  #      'USER': 'postgres',
+  #      'PASSWORD': '@@C14611',
+  #      'HOST': 'localhost',
+  #      'PORT': '5432',
+  #      
+  #  }
+#}
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
+
+ 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -125,9 +133,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+django_heroku.settings(locals())
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'app\static')
@@ -139,4 +150,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-django_heroku.settings(locals())
+django_heroku.settings(config=locals(), staticfiles=False, logging=False)

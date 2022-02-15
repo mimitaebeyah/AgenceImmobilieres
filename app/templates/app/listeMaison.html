@@ -24,9 +24,10 @@
         <div class= "card card-body">
             <a class="btn btn-primary btn-sm btn-block" href="{% url 'ajouter_maison' %}">Créer une maison</a>
             <table class="table table-sm">
+                <thread>
                 <tr>
 
-                    <th>ID</th>
+                    <th>Title</th>
                     <th>Prix</th>
                     <th>Prix_reduit</th>
                     <th>commune</th>
@@ -35,9 +36,11 @@
                     <th>Dtails</th>
 
                 </tr>
+                </thread>
+                <tbody>
                 {% for i in maison %}
 
-                <th>{{i.id}}</th>            
+                <th>{{i.title}}</th>            
                 <th>{{i.Prix}}</th>
                 <th>{{i.Prix_reduit}}</th>
                 <th>{{i.commune}}</th>
@@ -45,8 +48,9 @@
                 <th>{{i.Etat}}</th>
                 <th><a class="btn btn-sm btn-info" href="{% url 'maison-detail' i.id %}">Details</th>
                 </tr>
-
                 {% endfor %}
+            </tbody>
+                
 
             </table>
         </div>

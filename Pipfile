@@ -9,6 +9,8 @@ django-filter = "*"
 django-heroku = "*"
 django-crispy-forms = "*"
 pillow = "*"
+psycopg2 = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
