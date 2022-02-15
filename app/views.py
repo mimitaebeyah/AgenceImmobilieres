@@ -133,3 +133,60 @@ def Liste_maisons(request):
     maison = myFilter.qs
     context={'maison':maison, 'myFilter':myFilter}
     return render(request, 'app/listeMaison.html', context)
+
+    #inscription client
+def Inscription(request):
+
+    if request.method=="POST":   
+
+        nom = request.POST['nom']
+
+        prenom = request.POST['prenom']
+
+        adresse=request.POST['adresse']
+
+        password1 = request.POST['password1']
+
+        password2 = request.POST['password2']
+
+        Num_tel = request.POST['Num_tel']
+
+        # sexe = request.POST['sexe']
+
+        # image = request.FILES['image']
+
+        # nom_entreprise = request.POST['nom_entreprise']
+
+
+
+        # if User.objects.filter(username = username).first():
+
+        #     messages.error(request, "This username is already taken")
+
+        #     return redirect('/signup')
+
+        
+
+        # if password1 != password2:
+
+        #     messages.error(request, "Passwords do not match.")
+
+        #     return redirect('/signup')
+
+        
+
+        user = Client.objects.create_user(nom=nom, prenom=prenom, adresse=adresse, password2=password2, password1=password1, Num_tel=Num_tel)
+
+        # entreprise = Entreprise.objects.create(user=user, telephone=telephon, sexe=sexe, image=image, nom_entreprise=nom_entreprise, type="entreprise", status="non_confirmer")
+
+        Client.save()
+
+       # entreprise.save()
+
+        return render(request, "maison.html")
+
+    return render(request, "/")
+
+
+
+#login

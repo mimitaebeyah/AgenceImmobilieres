@@ -8,7 +8,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'app/images/maison/22.PNG' %}" class="d-block w-100" alt="..."> 
+      <img src="{% static 'app/images/maison/T.PNG' %}" class="d-block w-100" alt="..."> 
     </div>
     <div class="carousel-item">
       <img src="{% static 'app/images/maison/23.PNG' %}" class="d-block w-100" alt="...">
@@ -51,31 +51,31 @@
  <div class="owl-carousel" id="slider1">
 
   {%for b in ARAFAT %}
-  <a href="{% url 'maison-detail' b.id %}" class="btn"><div class="img-thumbnail"><img src="{{b.image_maison.url}}" alt="" linght="280px" height="280px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs. {{b.Prix_reduit}} ID: {{b.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b.id %}" class="btn"><div class="img-thumbnail"><img src="{{b.image_maison.url}}" alt="" linght="280px" height="280px"><span class="fw-bold"><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
   {%for b2 in ELMINA %}
-  <a href="{% url 'maison-detail' b2.id %}" class="btn"><div class="img-thumbnail"><img src="{{b2.image_maison.url}}" alt="" height="280px"><span class="fw-bold">{{b2.title}}</span><br><span class="fs-5">Rs. {{b2.Prix_reduit}} ID: {{b2.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b2.id %}" class="btn"><div class="img-thumbnail"><img src="{{b2.image_maison.url}}" alt="" height="280px"><span class="fw-bold"></span><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
   {%for b3 in DARNAIIM %}
-  <a href="{% url 'maison-detail' b3.id %}" class="btn"><div class="img-thumbnail"><img src="{{b3.image_maison.url}}" alt="" height="280px"><span class="fw-bold">{{b3.title}}</span><br><span class="fs-5">Rs. {{b3.Prix_reduit}}  ID: {{b3.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b3.id %}" class="btn"><div class="img-thumbnail"><img src="{{b3.image_maison.url}}" alt="" height="280px"><span class="fw-bold"></span><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
   {%for b4 in TEYARET %}
-  <a href="{% url 'maison-detail' b4.id %}" class="btn"><div class="img-thumbnail"><img src="{{b4.image_maison.url}}" alt="" height="280px"><span class="fw-bold">{{b4.title}}</span><br><span class="fs-5">Rs. {{b4.Prix_reduit}}  ID: {{b4.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b4.id %}" class="btn"><div class="img-thumbnail"><img src="{{b4.image_maison.url}}" alt="" height="280px"><span class="fw-bold"></span><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
   {%for b5 in TEVRAGHZEINA %}
-  <a href="{% url 'maison-detail' b5.id %}" class="btn"><div class="img-thumbnail"><img src="{{b5.image_maison.url}}" alt="" height="280px"><span class="fw-bold">{{b5.title}}</span><br><span class="fs-5">Rs. {{b5.Prix_reduit}} ID: {{b5.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b5.id %}" class="btn"><div class="img-thumbnail"><img src="{{b5.image_maison.url}}" alt="" height="280px"><span class="fw-bold"></span><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
   {%for b6 in SEBKHA %}
-  <a href="{% url 'maison-detail' b6.id %}" class="btn"><div class="img-thumbnail"><img src="{{b6.image_maison.url}}" alt="" height="280px"><span class="fw-bold">{{b6.title}}</span><br><span class="fs-5">Rs. {{b6.Prix_reduit}} ID: {{b6.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b6.id %}" class="btn"><div class="img-thumbnail"><img src="{{b6.image_maison.url}}" alt="" height="280px"><span class="fw-bold"></span><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
   {%for b7 in RIYAD %}
-  <a href="{% url 'maison-detail' b7.id %}" class="btn"><div class="img-thumbnail"><img src="{{b7.image_maison.url}}" alt="" height="260px"><span class="fw-bold">{{b7.title}}</span><br><span class="fs-5">Rs. {{b7.Prix_reduit}} ID: {{b7.id}}</span></div></a>
+  <a href="{% url 'maison-detail' b7.id %}" class="btn"><div class="img-thumbnail"><img src="{{b7.image_maison.url}}" alt="" height="260px"><span class="fw-bold"></span><br><span class="fs-5">Prix: {{b.Prix_reduit}}</div></span></a>
   {% endfor %}
 
 </div>

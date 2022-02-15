@@ -2,39 +2,149 @@
 {% load static %}
 {% block title %}Customer Registration{% endblock title %}
 {% block main-content %}
-<div class="container">
-  <div class="row my-3">
-   <div class="col-sm-6 offset-sm-3">
-    <h3>Client Enregistrement1`</h3>
-    <hr>
- 
-    <form action="" method="post" novalidate class="shadow p-5">
-      {% if messages %}
-           {% for message in messages %}
-            <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5" {% endif %}>{{message}}</p>
 
-            {% endfor %}
-      {% endif %}
-      {% csrf_token %}
-     {% for fm in form %}
-     <div class="form-group mb-3">
-       {{fm.label_tag}} {{fm}}  <small class="text-danger">{{fm.errors|striptags}}</small>
+<form class="container mt-4" method="POST" enctype="multipart/form-data">
 
-     </div>
-     {% endfor %}
-     <input type="submit" value="submit" class="btn btn-primary">
-     <br>
-    <div class="text-center text-primary fw-bold"><small>Existing User ? <a href="{% url 'login' %}" class="text-danger">login now</a></small></div>
-    {% if form.non_field_errors %}
-      {% for error in form.non_field_errors %}
-      <p class="alert alert-danger my-3">{{error}}</p>
-      {% endfor %}
-      {% endif %}
+  {% csrf_token %}
 
 
-    </form>
-   </div>
+
+  <div class="row">
+
+      <div class="form-group col-md-6">
+
+          <label>Nom</label>
+
+          <input type="text" class="form-control" name="nom" id="nom" placeholder="Enter votre nom ">
+
+      </div>
+
+      <div class="form-group col-md-6">
+
+          <label>Prenom</label>
+
+          <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Entrer votre prenom ">
+
+      </div>
+
   </div>
- </div>
+
+
+
+  <div class="row mt-4">
+
+      <div class="form-group col-md-12">
+
+          <label>adresse</label>
+
+          <input type="text" class="form-control" name="adresse" id="adresse" placeholder="Entrer adresse">
+
+      </div>
+
+  </div>
+
+  
+
+  <div class="row mt-4">
+
+      <div class="form-group col-md-6">
+
+          <label>Mot de passe</label>
+
+          <input type="password" class="form-control" name="password1" id="password1" placeholder="Entrer le mot de passe">
+
+      </div>
+
+      <div class="form-group col-md-6">
+
+          <label>Confirmer le mot de passe</label>
+
+          <input type="password" class="form-control" name="password2" id="password2" placeholder="Entrer la confirmation du mot de passe">
+
+      </div>
+
+  </div>
+
+
+
+  <div class="row mt-4">
+
+      <div class="form-group col-md-6">
+
+          <label>Email </label>
+
+          <input type="email" class="form-control" name="email" id="email" placeholder="Entrer votre Email ">
+
+      </div>
+
+      <div class="form-group col-md-6">
+
+          <label>Numero telephone</label>
+
+          <input type="Num_tel" class="form-control" name="Num_tel" id="phone" placeholder="Entrer le numero du telephone">
+
+      </div>
+
+  </div>
+
+
+
+  <!-- <div class="row mt-4">
+
+      <div class="form-group col-md-6">
+
+          <label>Sexe</label>
+
+          <div style="border: 1px solid lightgrey; padding: 5px; border-radius: 6px;">
+
+          <div class="form-check form-check-inline">
+
+              <input type="radio" class="custom-control-input" name="sexe" id="male" value="Male">
+
+              <label for="male" class="custom-control-label">Homme</label>
+
+          </div>
+
+          <div class="form-check form-check-inline">
+
+              <input type="radio" class="custom-control-input" name="sexe" id="female" value="Female">
+
+              <label for="female" class="custom-control-label">Femme</label>
+
+          </div>
+
+      </div>
+
+      </div>
+
+      <div class="form-group col-md-6">
+
+          <label>Logo de l'entreprise</label>
+
+          <input type="file" class="form-control" name="image" id="image" placeholder="Logo">
+
+      </div>
+
+  </div>
+
+
+
+  <div class="row mt-4">
+
+      <div class="form-group col-md-12">
+
+          <label>Nom de l'entreprise</label>
+
+          <input type="text" class="form-control" name="nom_entreprise" id="company_name" placeholder="Entrer le nom de l'entreprise">
+
+      </div>
+
+  </div> -->
+
+  <br>
+
+<input type="submit" value="Submit" class="btn" style="background-color: #4f868c; color: white; font-size: larger; width: 8rem;">
+
+</form>
 {% endblock main-content %}
     
