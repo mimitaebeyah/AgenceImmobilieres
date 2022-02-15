@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pickle import TRUE
-from pillow import Image
 from pathlib import Path
 import django_heroku
 import dj_database_url
