@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pickle import TRUE
-from PIL import Image
+from pillow import Image
 from pathlib import Path
 import django_heroku
 import dj_database_url
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_filters',
     'PIL',
+    'pillow',
+    
 ]
 
 MIDDLEWARE = [
