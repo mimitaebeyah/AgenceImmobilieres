@@ -100,6 +100,7 @@ def Ajoutermaison(request):
     if request.method == 'POST':
         form=Isertmaison(request.POST)
         if form.is_valid():
+            
             title = request.POST.get('title')
             Prix = request.POST.get('Prix')
             Prix_reduit = request.POST.get('Prix_reduit')
@@ -109,7 +110,7 @@ def Ajoutermaison(request):
             image_maison = request.POST.get('image_maison')
             Etat = request.POST.get('Etat')
             maison = Maison.objects.create(title=title, Prix=Prix, Prix_reduit=Prix_reduit, description=description,quartier=quartier, commune=commune, image_maison=image_maison,Etat=Etat)
-            form.save()
+            #form.save()
             return redirect('ajouter_maison')
     context={'form':form}
     return render(request, 'app/ajouter_maison.html', context)
