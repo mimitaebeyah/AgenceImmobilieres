@@ -90,11 +90,11 @@ DATABASES = {
     'default': {
         
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gestion',
+        'NAME': 'mimi_db',
         'USER': 'postgres',
         'PASSWORD': '@@C14611',
         'HOST': 'localhost',
-        'PORT': '5433',
+        'PORT': '5432',
        
    }
 }
